@@ -1,12 +1,14 @@
-import React from 'react'
-import Wether from './Components/Wether'
+import React, { useState } from "react";
+import Wether from "./Components/Wether";
 
 const App = () => {
-  return (
-    <div className='app'>
-      <Wether/>
-    </div>
-  )
-}
+  const [weather, setWeather] = useState(null);
 
-export default App
+  return (
+    <div className="app">
+      <Wether weather={weather} />
+    </div>
+  );
+};
+
+export default App;
